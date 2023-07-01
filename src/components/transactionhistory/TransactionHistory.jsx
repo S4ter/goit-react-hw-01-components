@@ -1,23 +1,33 @@
-import transactions from 'components/transactionhistory/transactions.json';
+import transactions from './transactions.json';
 
-export const TransactionHistory = () => (
-  <table class="transaction-history">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Amount</th>
-        <th>Currency</th>
-      </tr>
-    </thead>
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from './Transaction.js';
 
-    <tbody>
-      {transactions.map(transaction => (
-        <tr key={transaction.id}>
-          <td>{transaction.type}</td>
-          <td>{transaction.amount}</td>
-          <td>{transaction.currency}</td>
-        </tr>
-      ))}
-    </tbody>
-  </table>
-);
+export const TransactionHistory = () => {
+  return (
+    <Table variant="table">
+      <TableHead variant="head">
+        <TableRow variant="row">
+          <TableHeader variant="header">Type</TableHeader>
+          <TableHeader variant="header">Amount</TableHeader>
+          <TableHeader variant="header">Currency</TableHeader>
+        </TableRow>
+      </TableHead>
+      <TableBody variant="body">
+        {transactions.map(transaction => (
+          <TableRow variant="row" key={transaction.id}>
+            <TableCell variant="cell">{transaction.type}</TableCell>
+            <TableCell variant="cell">{transaction.amount}</TableCell>
+            <TableCell variant="cell">{transaction.currency}</TableCell>
+          </TableRow>
+        ))}
+      </TableBody>
+    </Table>
+  );
+};

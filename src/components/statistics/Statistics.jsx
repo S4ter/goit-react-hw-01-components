@@ -1,16 +1,25 @@
 import data from 'components/statistics/data.json';
+import {
+  Stats,
+  StatsItem,
+  StatsLabel,
+  StatsList,
+  StatsTitle,
+  StatsValue,
+} from './Stats';
 
-export const Statistics = () => (
-  <section class="statistics">
-    <h2 class="title">Upload stats</h2>
-
-    <ul class="stat-list">
-      {data.map(data => (
-        <li class="item" key={data.id}>
-          <span class="label">{data.label}: </span>
-          <span class="percentage">{data.percentage}</span>
-        </li>
-      ))}
-    </ul>
-  </section>
-);
+export const Statistics = () => {
+  return (
+    <Stats variant="container">
+      <StatsTitle variant="title">UPLOAD STATS</StatsTitle>
+      <StatsList variant="list">
+        {data.map(data => (
+          <StatsItem variant="item" key={data.id}>
+            <StatsLabel variant="label">{data.label}: </StatsLabel>
+            <StatsValue variant="value">{data.percentage}%</StatsValue>
+          </StatsItem>
+        ))}
+      </StatsList>
+    </Stats>
+  );
+};

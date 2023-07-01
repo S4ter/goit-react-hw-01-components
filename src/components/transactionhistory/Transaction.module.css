@@ -1,0 +1,26 @@
+.table {
+  width: 800px;
+  border: 2px black solid;
+  border-collapse: collapse;
+  text-align: center;
+}
+.head {
+  color: red;
+  border: 2px black solid;
+}
+.body {
+  color: blue;
+}
+.header {
+  color: rgb(0, 0, 0);
+  border: 2px black solid;
+  background-color: #f79af7;
+}
+.row {
+  border: 2px black solid;
+}
+.cell {
+  border: 2px #f79af7 solid;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.658);
+}
