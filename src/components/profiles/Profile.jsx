@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import user from 'components/profile/user.json';
+import user from 'components/profiles/user.json';
 import {
   ProfileContainter,
   Description,
