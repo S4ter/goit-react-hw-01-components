@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import data from 'components/statistics/data.json';
 import {
   Stats,
@@ -6,7 +7,7 @@ import {
   StatsList,
   StatsTitle,
   StatsValue,
-} from './Stats';
+} from './StatisticsElements';
 
 export const Statistics = () => {
   return (
@@ -22,4 +23,11 @@ export const Statistics = () => {
       </StatsList>
     </Stats>
   );
+};
+Statistics.propTypes = {
+  data: PropTypes.shape({
+    variant: PropTypes.string.isRequired,
+    percentage: PropTypes.number.isRequired,
+    label: PropTypes.string.isRequired,
+  }),
 };
