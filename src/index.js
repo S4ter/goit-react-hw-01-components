@@ -9,8 +9,8 @@ import './index.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <Profile />
     <Statistics />
+    <Profile />
     <FriendList />
     <TransactionHistory />
   </React.StrictMode>
