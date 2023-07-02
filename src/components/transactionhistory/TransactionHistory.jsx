@@ -21,11 +21,11 @@ export const TransactionHistory = () => {
         </TableRow>
       </TableHead>
       <TableBody variant="body">
-        {transactions.map(transaction => (
-          <TableRow variant="row" key={transaction.id}>
-            <TableCell variant="cell">{transaction.type}</TableCell>
-            <TableCell variant="cell">{transaction.amount}</TableCell>
-            <TableCell variant="cell">{transaction.currency}</TableCell>
+        {transactions.map(transactions => (
+          <TableRow variant="row" key={transactions.id}>
+            <TableCell variant="cell">{transactions.type}</TableCell>
+            <TableCell variant="cell">{transactions.amount}</TableCell>
+            <TableCell variant="cell">{transactions.currency}</TableCell>
           </TableRow>
         ))}
       </TableBody>
@@ -33,7 +33,7 @@ export const TransactionHistory = () => {
   );
 };
 TransactionHistory.propTypes = {
-  transaction: PropTypes.shape({
+  transactions: PropTypes.shape({
     type: PropTypes.string.isRequired,
     amount: PropTypes.string.isRequired,
     currency: PropTypes.string.isRequired,
